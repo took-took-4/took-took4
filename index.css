@@ -7,24 +7,11 @@
   margin-bottom: 20px;
 }
 
-#progress {
-    position:relative;
-    width:250px;
-    height:20px;
-    border:1px solid black;
-}
-
 #progress-bar {
     background:#99ccff;
     height:20px;
     width:0%;
     display:inline-block;
-}
-
-#progress-text {
-    position:absolute;
-    z-index:2;
-    right:0;
 }
 
 .checkbox{
@@ -46,9 +33,9 @@
     color: white;
 }
 
-.toggle.ios, .toggle-on.ios, .toggle-off.ios { 
-  border-radius: 20px; 
+.toggle.ios, .toggle-on.ios, .toggle-off.ios {
+  border-radius: 20px;
 }
-.toggle.ios .toggle-handle { 
-    border-radius: 20px; 
+.toggle.ios .toggle-handle {
+    border-radius: 20px;
 }
