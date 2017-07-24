@@ -3,7 +3,7 @@
   /* border-top: 100px; */
 }
  .infobox{
-  height: 260px;
+  height: 280px;
   margin-bottom: 20px;
 }
 
@@ -34,11 +34,10 @@
        border-radius: 20px;
 }
 
-.switch{
+/* .switch{
      margin-top: 18px;
     float: right;
     position: relative;
-    /* display: inline-block; */
     width: 40px;
     height: 20px;
 }
@@ -85,15 +84,22 @@ input:checked + .slider:before {
   transform: translateX(19spx);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 20px;
 }
 
 .slider.round:before {
   border-radius: 50%;
-}
+} */
 
 #mid{
     margin-top: 60px;
+}
+
+.autobox{
+    margin-top: 10px;
+}
+
+.auto{
+    color: white;
 }

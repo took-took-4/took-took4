@@ -82,5 +82,6 @@ function main() {
             console.error('Fail to sent survo action');
         });
     });
+
 }
 $().ready(main());
