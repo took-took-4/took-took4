@@ -37,7 +37,7 @@ function main() {
         }).done(function(data) {
             console.log('Receive Person is done');
             if (data == 2) {
-                $('#personpic').attr('src', "pic/user2.png");
+                $('#personpic').attr('src', "pic/user.png");
                 $('#personnum').text('x 2');
                 $('#personnum').css('color', 'black');
                 $('#passbox').css('background-color', 'white');
