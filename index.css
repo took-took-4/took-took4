@@ -4,8 +4,8 @@
 }
  .infobox{
   height: 280px;
-  margin-bottom: 20px;  
-} 
+  margin-bottom: 20px;
+}
 
 #progress {
     position:relative;
@@ -27,79 +27,28 @@
     right:0;
 }
 
-.checkbox{ 
-    border-radius: 20px; 
+.checkbox{
+    border-radius: 20px;
 }
 .checkbox {
-       border-radius: 20px; 
+       border-radius: 20px;
 }
-
-/* .switch{
-     margin-top: 18px;
-    float: right;
-    position: relative;
-    width: 40px;
-    height: 20px;
-}
-
-.switch input {
-    display:none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(19px);
-  -ms-transform: translateX(19px);
-  transform: translateX(19spx);
-}
-
-.slider.round {
-  border-radius: 20px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} */
 
 #mid{
     margin-top: 60px;
 }
 
 .autobox{
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .auto{
     color: white;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { 
+  border-radius: 20px; 
+}
+.toggle.ios .toggle-handle { 
+    border-radius: 20px; 
 }

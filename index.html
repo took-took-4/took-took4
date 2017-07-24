@@ -37,18 +37,16 @@
                 </button>
         <div class='col-md-10'>
           <a class="navbar-brand" href="#">
-              <img class="img-responsive" src="pic/tooktook.png" alt="" height="30px" width="30px"> Mr.Triwith Mutitakul
-            </a>
+            <img class="img-responsive" src="pic/tooktook.png" alt="" height="30px" width="30px"> Mr.Triwith Mutitakul
+    
+          </a>
 
         </div>
         <div class='col-md-2'>
           <div class="autobox">
-            <p class="auto">Automatic : <input type="checkbox" checked data-toggle="toggle"></p>
+            <input type="checkbox" checked data-toggle="toggle" data-on="Automatic" data-off="Manual" data-onstyle="success" data-offstyle="danger">
 
           </div>
-          <!-- <label class="switch"><input id='switch' type="checkbox">
-                <span class="slider round"></span>
-             </label>  -->
         </div>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,64 +60,69 @@
 
       <div class="col-md-4">
         <div class="form-control infobox">
-          <img class="img-responsive" src="pic/notification.png" alt="" height="40%" width="40%">
-          <label id="notibox">Need you<br>
-        </label>
+          <center><img class="img-responsive" src="pic/notification.png" alt="" height="40%" width="40%">
+          <label id="notibox">Need you<br></label>
+          </center>
         </div>
 
         <div class="form-control infobox">
+          <center>
           <label>Alcohol</label>
           <img class="img-responsive" src="pic/alcohol.png" alt="" height="40%" width="40%">
           <label id="alcohol"> 0 Mg%</label>
           <p id="recentAl">Recently : 0 Mg%</p>
+          </center>
         </div>
       </div>
 
 
       <div class="col-md-4">
         <div class="form-control infobox">
-          <label id='gasbox'>LPG<br>
-        <img class="img-responsive" src="pic/GAS.png" alt="" height="40%" width="40%">
-        <div id="progress">
-          <span id="progress-text">0%</span>
+          <label id='gasbox'><center>LPG</center><br>
+        <center><img class="img-responsive" src="pic/GAS.png" alt="" height="40%" width="40%"></center><br>
+       <div id="progress">
+          <center><span id="progress-text">0%</span></center>
         <div id="progress-bar"></div>
         </div>
         </label>
         </div>
         <div>
           <div class="form-control infobox">
+            <center>
             <label> Rain </label>
-            <img class="img-responsive" src="pic/umbrella.png" alt="" height="40%" width="40%">
-            <div class="checkbox">
+            <img class="img-responsive" src="pic/umbrella.png" alt="" height="40%" width="40%"><br>
+            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-onstyle="success" data-offstyle="danger">
+            <!-- <div class="checkbox">
               <label>
               <input type="checkbox" data-toggle="toggle">
               Option one is enabled
             </label>
-            </div>
-            <!-- <div class="checkbox disabled">
-            <label>
-              <input type="checkbox" disabled data-toggle="toggle">
-              Option two is disabled
-            </label>
-          </div> -->
+            </div> -->
+            </center>
           </div>
         </div>
       </div>
-
-
-      <div class="col-md-4">
-        <div class="form-control infobox">
-          <label id='people'>Passenger<br>
-        <img class="img-responsive" src="pic/512x5ff12.png" alt="" height="40%" width="40%">  
+    </div>
+    <div class="col-md-4">
+      <div class="form-control infobox">
+        <center>
+        <label id='people'>Passenger<br>
+        <img class="img-responsive" src="pic/512x5ff12.png" alt="" height="40%" width="40%">
         </label>
-        </div>
-        <div class="form-control infobox">
-          <label id="weather">Sunny<br>
-        <img class="img-responsive" src="pic/weather-sunny.png" alt="" height="40%" width="40%">  
-      </label>
-        </div>
+        </center>
       </div>
-
+      <div class="form-control infobox">
+        <center>
+        <label id="weather">Sunny<br>
+          <div class="col-md-5">
+             <img class="img-responsive" src="pic/weather-sunny.png" alt="" height="100%" width="100%">
+          </div>
+          <div class="col-md-7">     
+          <table><caption>Right Now</caption><tbody><tr><th>Wind</th><td><span class="">10 mph </span></td></tr><tr><th>Humidity</th><td><span class=""><span>66<span class="percent-symbol">%</span></span></span></td></tr><tr><th>Dew Point</th><td><span class="">76<sup>°</sup></span></td></tr><tr><th>Pressure</th><td><span class="">29.77 in <span classname="icon icon-font iconset-arrows icon-arrow-down-line" class="icon icon-font iconset-arrows icon-arrow-down-line"></span></span></td></tr><tr><th>Visibility</th><td><span class="">6.0 mi</span></td></tr><tr><th>Tempurature</th><td><span class="">30 <sup>°</sup>C</span></td></tr></tbody></table>
+          </div>
+      </label>
+        </center>
+      </div>
     </div>
   </div>
 
