@@ -1,0 +1,9 @@
+.form-control{
+  border-style: solid;
+  /* border-top: 100px; */
+}
+
+ .infobox{
+  height: 260px;
+  margin-bottom: 20px;  
+} 
