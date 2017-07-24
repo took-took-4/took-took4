@@ -29,9 +29,9 @@
     margin-top: 10px;
 }
 
-.auto{
+ .auto{
     color: white;
-}
+} 
 
 .toggle.ios, .toggle-on.ios, .toggle-off.ios {
   border-radius: 20px;
@@ -39,3 +39,10 @@
 .toggle.ios .toggle-handle {
     border-radius: 20px;
 }
+
+body{
+  background-color:   #e0c1e0;
+
+}
+
+
