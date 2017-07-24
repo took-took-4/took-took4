@@ -31,7 +31,7 @@
 
  .auto{
     color: white;
-} 
+}
 
 .toggle.ios, .toggle-on.ios, .toggle-off.ios {
   border-radius: 20px;
@@ -50,4 +50,6 @@ body{
     font-family: Courier New, Courier, monospace;
 }
 
-
+#fame{
+  text-align: center;
+}
