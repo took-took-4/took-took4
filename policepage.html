@@ -1,19 +1,22 @@
 <html>
 
 <head>
-    <title>Police System</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Police System</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="policepage.css" type="text/css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="policepage.css" type="text/css">
 
 </head>
 
@@ -26,26 +29,40 @@
                 <a class="navbar-brand" href="#">Police system</a>
             </div>
           </div>
-          <div class='col-md-3'>
+          <div class='col-md-7'>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="policepage.html">Home</a></li>
                 <li><a href="policehistorypage.html">History</a></li>
             </ul>
           </div>
-          <div class='col-md-7'>
+          <div class='col-md-3'>
             <p id='policeman'><br>Lieutenant Varit Assawavisidchai</p>
           </div>
-
         </div>
-      </div>
-
-    </nav>
-    <script src='policepage.js'></script>
-    <div class='rows'>
-      <div class='col-md-4' id='dayboard'>
 
       </div>
     </div>
+
+  </nav>
+  <div class='rows'>
+    <div class='col-md-8' id='dayboard'>
+
+    </div>
+
+    <div class="col-md-4" id="chat">
+
+      <textarea id="box" disabled="" class=" text" rows="25"></textarea>
+      <div class="input-group">
+        <input id="inputMessage" type="text" class="form-control" placeholder="Enter your text here!! ">
+        <span class="input-group-btn">
+        <button id ="sent" class="btn btn-default" type="button">Sent!</button>
+      </span>
+      </div>
+    </div>
+  </div>
+
+  <script src='policepage.js'></script>
+
 </body>
 
 </html>
