@@ -34,5 +34,6 @@ function main() {
     //         console.error('Fail to receive Door');
     //     });
     // }, 400);
+
 }
 $().ready(main());
