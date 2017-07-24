@@ -1,6 +1,6 @@
 .form-control{
   border-style: solid;
-  /* border-top: 100px; */
+  border-radius: 30px;
 }
  .infobox{
   height: 280px;
