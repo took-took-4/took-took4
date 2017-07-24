@@ -29,6 +29,24 @@ overflow: scroll;
 }
  body{
     background-color: #e6e6fa;
-      /* background-color: #f0f8ff; */
 
+ }
+
+ .panel-heading{
+   font-family: 'Times New Roman', Times, serif;
+ }
+
+ .panel-body{
+   font-family: 'Times New Roman', Times, serif
+ }
+
+ #chat{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ }
+
+ .posys{
+   color: white;
+   display: flex; 
+   align-items: center;
+   font-weight: bold;
  }
