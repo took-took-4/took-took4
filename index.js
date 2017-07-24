@@ -1,3 +1,14 @@
+////chatbot for police page
+// function chatAlert(){
+//   var location = 'Saenpalm Nakorn Pathom'
+//   $('#alertbox').append('Found Irregal TookTook at '+location+'\n');
+// }
+// function chatBot(answer){
+//   var ans = answer;
+//   var location = 'Saenpalm Nakorn Pathom'
+//   if(ans=='h'){
+//   }
+// }
 function main() {
     var linkMotion = ''
     var linkRain = ''
@@ -26,17 +37,17 @@ function main() {
     // }, 400);
 
     //Receive Alcohol data
-    setInterval(function() {
-        $.ajax({
-            url: linkGas
-        }).done(function(data) {
-            console.log('Receive Alcohol is done');
-            $('#recentAl').text('Recently : '+$('#alcohol').text()+' Mg%')
-            $('#alcohol').text(data+' Mg%');
-        }).fail(function() {
-            console.error('Fail to receive Alcohol');
-        });
-    }, 400);
+    // setInterval(function() {
+    //     $.ajax({
+    //         url: linkGas
+    //     }).done(function(data) {
+    //         console.log('Receive Alcohol is done');
+    //         $('#recentAl').text('Recently : '+$('#alcohol').text()+' Mg%')
+    //         $('#alcohol').text(data+' Mg%');
+    //     }).fail(function() {
+    //         console.error('Fail to receive Alcohol');
+    //     });
+    // }, 400);
 
     //Receive Light data
     // setInterval(function() {
@@ -61,27 +72,26 @@ function main() {
     // }, 400);
 
     //set the Servo
-    $('#lightbutton').click(function() {
-        var msg
-        if ($('#survobutton').val() === 'open') {
-            msg = 'OFF';
-            // $("#doorbutton").prop('value', 'Save');
-            $("#survobutton").val("close");
-            $("#survobutton").text('Open the Umbrella');
-        } else {
-            msg = 'ON';
-            // $("#doorbutton").prop('value', 'Save');
-            $("#survobutton").val('open');
-            $("#survobutton").text('Close the Umbrella');
-        }
-        $.ajax({
-            url: linkLight + '/set/' + msg
-        }).done(function() {
-            console.log('sent survo action complete');
-        }).fail(function() {
-            console.error('Fail to sent survo action');
-        });
-    });
+    // $('#lightbutton').click(function() {
+    //     var msg
+    //     if ($('#survobutton').val() === 'open') {
+    //         msg = 'OFF';
+    //         // $("#doorbutton").prop('value', 'Save');
+    //         $("#survobutton").val("close");
+    //         $("#survobutton").text('Open the Umbrella');
+    //     } else {
+    //         msg = 'ON';
+    //         // $("#doorbutton").prop('value', 'Save');
+    //         $("#survobutton").val('open');
+    //         $("#survobutton").text('Close the Umbrella');
+    //     }
+    //     $.ajax({
+    //         url: linkLight + '/set/' + msg
+    //     }).done(function() {
+    //         console.log('sent survo action complete');
+    //     }).fail(function() {
+    //         console.error('Fail to sent survo action');
+    //     });
+    // });
 
-}
 $().ready(main());
