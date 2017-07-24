@@ -18,11 +18,11 @@ function main() {
     var linkLight = ''
 
     //progress bar action
-    progress = setInterval(function()
+    setInterval(function()
     {
-        if($('#progress-text').text()=='0%'){
-        $('#progress-text').text('70' + '%');
-        $('#progress-bar').css({'width':'70'+'%'});
+        if($('#progress-bar').text()=='0%'){
+        $('#progress-bar').text('70' + '%');
+        $('#progress-bar').attr('style','width:70%');
     }}, 1000);
 
     ////Receive Gas data
@@ -93,5 +93,5 @@ function main() {
     //         console.error('Fail to sent survo action');
     //     });
     // });
-
+}
 $().ready(main());
