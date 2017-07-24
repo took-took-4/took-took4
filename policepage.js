@@ -13,8 +13,44 @@ function getLocalDate(){
   var date = new Date()
   return date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()
 }
+function setupGraph(north,west,middle,east,south){
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+  type: 'polarArea',
+  data: {
+    labels: ['North','West','Middle','East','South'],
+    datasets: [{
+        label: '# of Votes',
+        data: [north,west,middle,east,south],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 4
+    }]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
+        }]
+    }
+  }
+  });
+}
 function main(){
-  console.log(getLocalDate());
-
+  setupGraph(4,3,1,3,7);
 }
 $().ready(main());
