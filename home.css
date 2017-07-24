@@ -1,6 +1,13 @@
 .intro{
 /* background-image :url("pic/tookFame.jpg"); */
 }
-#mid{
+.intro-header{
     /* margin-top: 100px  ; */
+   
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    /* background: pic/tookFame.jpg no-repeat center center; */
+
 }
