@@ -11,12 +11,8 @@ function main() {
 
     $('#switchrain').bootstrapToggle('disable')
     //progress bar action
-    setInterval(function() {
-        if ($('#progress-bar').text() == '0%') {
-            $('#progress-bar').text('70' + '%');
-            $('#progress-bar').attr('style', 'width:70%');
-        }
-    }, 1000);
+    $('#pbar').attr('style','width:70%');
+    $('#pbar').text('70' + '%');
 
     $('#switchauto').change(function() {
         if (switauto == 0) {
