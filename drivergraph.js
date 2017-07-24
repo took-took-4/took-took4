@@ -1,7 +1,5 @@
 function setupGraph(Ladprao, Ramkamhaeng, Sukhumvit, Bangna,Siam) {
     var ctx = document.getElementById("myChart");
-    var linkDatabase = 'http://158.108.165.223/data/fame/database'
-    var tempData = {}
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
