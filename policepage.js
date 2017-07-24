@@ -53,14 +53,14 @@ function setupGraph(north, west, middle, east, south) {
 }
 
 function addNew(head, detail) {
-    $('#newbox').append('<div class="panel panel-primary" id="news"><div class="panel-heading">' + head + '</div><div class="panel-body"><div class = "col-md-10">' + detail + '</div> <div class = "col-md-2" ><button type = "button"class = "btn btn-danger btn-lg" ><span class = "glyphicon glyphicon-off"aria - hidden = "true" > </span> Lock down </button> </div> </div> </div>')
+    $('#newbox').prepend('<div class="panel panel-primary" id="news"><div class="panel-heading">' + head + '</div><div class="panel-body"><div class = "col-md-10">' + detail + '</div> <div class = "col-md-2" ><button type = "button"class = "btn btn-danger btn-lg" ><span class = "glyphicon glyphicon-off"aria - hidden = "true" > </span> Lock down </button> </div> </div> </div>')
 }
 
 function main() {
     setupGraph(4, 3, 1, 3, 7);
     addNew('Jack', 'Giant');
-      $('#newbox').animate({
-        scrollTop: $('#newbox').prop('scrollHeight')
-      }, 2000);
+      // $('#newbox').animate({
+      //   scrollTop: $('#newbox').prop('scrollHeight')
+      // }, 2000);
 }
 $().ready(main());
