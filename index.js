@@ -1,33 +1,18 @@
-////chatbot for police page
-// function chatAlert(){
-//   var location = 'Saenpalm Nakorn Pathom'
-//   $('#alertbox').append('Found Irregal TookTook at '+location+'\n');
-// }
-// function chatBot(answer){
-//   var ans = answer;
-//   var location = 'Saenpalm Nakorn Pathom'
-//   if(ans=='h'){
-//   }
-// }
 function main() {
     // var linkMotion = ''
     var linkRain = ''
     var linkServo = ''
     var linkGas = ''
     // var linkSwitch = ''
-    var linkLight = ''
+    var linkLight = 'http://158.108.165.223/data/TUK40/alert'
     var linkPerson = ''
 
     var switauto = 1;
 
     $('#switchrain').bootstrapToggle('disable')
     //progress bar action
-    setInterval(function() {
-        if ($('#progress-bar').text() == '0%') {
-            $('#progress-bar').text('70' + '%');
-            $('#progress-bar').attr('style', 'width:70%');
-        }
-    }, 1000);
+    $('#pbar').attr('style','width:70%');
+    $('#pbar').text('70' + '%');
 
     $('#switchauto').change(function() {
         if (switauto == 0) {
@@ -91,15 +76,15 @@ function main() {
     // }, 400);
 
     //Receive Light data
-    // setInterval(function() {
-    //     $.ajax({
-    //         url: linkLight
-    //     }).done(function(data) {
-    //         console.log('Receive Alcohol is done');
-    //     }).fail(function() {
-    //         console.error('Fail to receive Alcohol');
-    //     });
-    // }, 400);
+    setInterval(function() {
+        $.ajax({
+            url: linkLight
+        }).done(function(data) {
+            console.log('Receive Alcohol is done');
+        }).fail(function() {
+            console.error('Fail to receive Alcohol');
+        });
+    }, 400);
 
     // //Receive Switch data
     // setInterval(function() {
