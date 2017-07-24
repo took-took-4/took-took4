@@ -59,8 +59,5 @@ function addNew(head, detail) {
 function main() {
     setupGraph(4, 3, 1, 3, 7);
     addNew('Jack', 'Giant');
-      // $('#newbox').animate({
-      //   scrollTop: $('#newbox').prop('scrollHeight')
-      // }, 2000);
 }
 $().ready(main());
