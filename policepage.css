@@ -50,3 +50,7 @@ overflow: scroll;
    align-items: center;
    font-weight: bold;
  }
+
+ .navbar-brand{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+ }
