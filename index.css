@@ -4,8 +4,9 @@
 }
  .infobox{
   height: 260px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px;  
+} 
+
 #progress {
     position:relative;
     width:250px;
