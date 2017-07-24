@@ -25,6 +25,11 @@ function main() {
         }
     });
 
+    setInterval(function(){
+      console.log();
+      $('#tempbox').text('Temperature : '+Math.floor(Math.random()*42)+'°C')
+    },Math.floor(Math.random()*50000))
+
     //Receive person data
     setInterval(function() {
         $.ajax({
@@ -44,6 +49,11 @@ function main() {
             } else if (data == 0) {
                 $('#personpic').attr('src', "pic/512x5ff12.png");
                 $('#personnum').text('x 0');
+                $('#personnum').css('color', 'black');
+                $('#passbox').css('background-color', 'white');
+            } else if (data == 1) {
+                $('#personpic').attr('src', "pic/512x5ff12.png");
+                $('#personnum').text('x 1');
                 $('#personnum').css('color', 'black');
                 $('#passbox').css('background-color', 'white');
             } else {
