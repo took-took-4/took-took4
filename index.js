@@ -8,9 +8,9 @@ function main() {
 
     progress = setInterval(function()
     {
-        if($('#progress .progress-text').text()=='0%'){
-        $('#progress .progress-text').text('70' + '%');
-        $('#progress .progress-bar').css({'width':'70'+'%'});
+        if($('#progress-text').text()=='0%'){
+        $('#progress-text').text('70' + '%');
+        $('#progress-bar').css({'width':'70'+'%'});
     }}, 1000);
     // setInterval(function() {
     //         if (  $('#gasbar').attr('aria-valuenow')==40) {
