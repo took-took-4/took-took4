@@ -1,0 +1,18 @@
+body{
+     font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+.head{
+    font-size: 40;
+    font-weight: bold;
+}
+
+.posys{
+    color: white;
+    text-align: center;
+    margin-left:3em
+}
+
+#policeman{
+    color: white;
+}

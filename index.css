@@ -1,6 +1,6 @@
 .form-control{
   border-style: solid;
-  /* border-top: 100px; */
+  border-radius: 30px;
 }
  .infobox{
   height: 280px;
@@ -31,7 +31,7 @@
 
  .auto{
     color: white;
-} 
+}
 
 .toggle.ios, .toggle-on.ios, .toggle-off.ios {
   border-radius: 20px;
@@ -41,8 +41,15 @@
 }
 
 body{
-  background-color:   #e0c1e0;
+  background-color: #e0c1e0;
 
 }
 
+.headbox{
+    font-size: 20;
+    font-family: Courier New, Courier, monospace;
+}
 
+#fame{
+  text-align: center;
+}

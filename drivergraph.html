@@ -1,0 +1,106 @@
+<html>
+
+<head>
+  <title>Passengers Graph</title>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="drivergraph.css" type="text/css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="  https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+</head>
+
+<body><br>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="rows">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <!-- <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> -->
+                </button>
+        <div class='col-md-5'>
+          <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+            <div class="glyphicon glyphicon-chevron-left"></div> Back
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a class="navbar-brand" style="display: flex; align-items: center;"> Mr.Triwith Mutitakul</a>
+        </div>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+
+  <div class="container">
+    <div class='rows' id="mid">
+      <div class=col-md-4>
+        <center>
+          <p id='head'>Top 5 Area of Passengers</p><br>
+          <canvas id="myChart" width="50px" height="50px"></canvas>
+        </center>
+      </div>
+      <div class=col-md-8>
+        <h2 class="tabletop5">Table of Top 5 Areas</h2>
+        <p class="undertable">The table that show result for 3 months</p>
+        <table class="table table-striped" style="width:600px;table-layout:fixed">
+          <thead>
+            <tr>
+              <th>Province</th>
+              <th>Passenger</th>
+              <th>Popular Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ladprao</td>
+              <td>26</td>
+              <td>17.30</td>
+            </tr>
+            <tr>
+              <td>Ramkamhaeng</td>
+              <td>22</td>
+              <td>16.00</td>
+            </tr>
+            <tr>
+              <td>Sukhumvit</td>
+              <td>21</td>
+              <td>06.30</td>
+            </tr>
+            <tr>
+              <td>Bangna</td>
+              <td>19</td>
+              <td>17.50</td>
+            </tr>
+            <tr>
+              <td>Siam</td>
+              <td>18</td>
+              <td>18.20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <script src='drivergraph.js'></script>
+</body>
+
+</html>
