@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 
-<body>
+<body background="pic/bg.png">
 
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -59,14 +59,15 @@
 
       <div class="col-md-4">
         <div class="form-control infobox">
-          <center><img class="img-responsive" src="pic/notification.png" alt="" height="40%" width="40%">
-            <label id="notibox">Need you<br></label>
+
+          <center><br><img class="img-responsive" src="pic/notification.png" alt="" height="40%" width="40%">
+            <label id="notibox">Need you</label>
           </center>
         </div>
 
         <div class="form-control infobox">
           <center>
-            <label>Alcohol</label>
+            <label>Alcohol<br></label>
             <img class="img-responsive" src="pic/alcohol.png" alt="" height="40%" width="40%">
             <label id="alcohol"> 0 Mg%</label>
             <p id="recentAl">Recently : 0 Mg%</p>
@@ -91,7 +92,7 @@
         <div>
           <div class="form-control infobox">
             <center>
-              <label> Rain </label>
+              <label> Rain </label><br>
               <img class="img-responsive" src="pic/umbrella.png" alt="" height="40%" width="40%"><br>
               <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-onstyle="success" data-offstyle="danger">
               <!-- <div class="checkbox">
@@ -108,20 +109,23 @@
     <div class="col-md-4">
       <div class="form-control infobox">
         <center>
-          <label id='people'>Passenger<br>
+          <label id='people'>Passenger
         <img class="img-responsive" src="pic/512x5ff12.png" alt="" height="40%" width="40%">
         </label>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <br>
+            <div class="well well-sm">x 1</div>
+          </div>
         </center>
       </div>
       <div class="form-control infobox">
         <center>
-          <label id="weather">Sunny<br>
-          <div class="col-md-5">
-             <img class="img-responsive" src="pic/weather-sunny.png" alt="" height="100%" width="100%">
-          </div>
-          <div class="col-md-7">
-          <table><caption>Right Now</caption><tbody><tr><th>Wind</th><td><span class="">10 mph </span></td></tr><tr><th>Humidity</th><td><span class=""><span>66<span class="percent-symbol">%</span></span></span></td></tr><tr><th>Dew Point</th><td><span class="">76<sup>°</sup></span></td></tr><tr><th>Pressure</th><td><span class="">29.77 in <span classname="icon icon-font iconset-arrows icon-arrow-down-line" class="icon icon-font iconset-arrows icon-arrow-down-line"></span></span></td></tr><tr><th>Visibility</th><td><span class="">6.0 mi</span></td></tr><tr><th>Tempurature</th><td><span class="">30 <sup>°</sup>C</span></td></tr></tbody></table>
-          </div>
+          <label id="weather">Tempurature
+             <img class="img-responsive" src="pic/weather-sunny.png" alt="" height="40%" width="40%"><br>
+
+          <!-- <table><caption>Right Now</caption><tbody><tr><th>Wind</th><td><span class="">10 mph </span></td></tr><tr><td><tr><th>Tempurature</th><td><span class="">30 <sup>°</sup>C</span></td></tr></tbody></table> -->
+            <span>Sunny</span><span class=" ">,Tempurature = </span><span class="temp">30°C</span>
       </label>
         </center>
       </div>
