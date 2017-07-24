@@ -10,20 +10,61 @@
 //   }
 // }
 function main() {
-    var linkMotion = ''
+    // var linkMotion = ''
     var linkRain = ''
     var linkServo = ''
     var linkGas = ''
-    var linkSwitch = ''
+    // var linkSwitch = ''
     var linkLight = ''
+    var linkPerson = ''
 
+    var switauto = 1;
+
+    $('#switchrain').bootstrapToggle('disable')
     //progress bar action
-    setInterval(function()
-    {
-        if($('#progress-bar').text()=='0%'){
-        $('#progress-bar').text('70' + '%');
-        $('#progress-bar').attr('style','width:70%');
-    }}, 1000);
+    setInterval(function() {
+        if ($('#progress-bar').text() == '0%') {
+            $('#progress-bar').text('70' + '%');
+            $('#progress-bar').attr('style', 'width:70%');
+        }
+    }, 1000);
+
+    $('#switchauto').change(function() {
+        if (switauto == 0) {
+            switauto = 1;
+            $('#switchrain').bootstrapToggle('disable')
+        } else {
+            switauto = 0;
+            $('#switchrain').bootstrapToggle('enable')
+            // $('#switchrain').prop('disabled', true);
+        }
+    });
+
+    // //Receive person data
+    // setInterval(function() {
+    //     $.ajax({
+    //         url: linkPerson
+    //     }).done(function(data) {
+    //         console.log('Receive Person is done');
+    //         if (data == 2) {
+    //           $('#personpic').attr('src',"pic/user2.png");
+    //           $('#personnum').text('x 2');
+    //           $('#personnum').css('color','black');
+    //         }
+    //         else if (data==3) {
+    //           $('#personpic').attr('src',"pic/user3.png");
+    //           $('#personnum').text('x 3');
+    //           $('#personnum').css('color','black');
+    //         }
+    //         else{
+    //           $('#personpic').attr('src',"pic/userMORE.png");
+    //           $('#personnum').text('x '+data);
+    //           $('#personnum').css('color','red');
+    //         }
+    //     }).fail(function() {
+    //         console.error('Fail to receive Person');
+    //     });
+    // }, 400);
 
     ////Receive Gas data
     // setInterval(function() {
