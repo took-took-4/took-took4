@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .form-control{
   border-style: solid;
   /* border-top: 100px; */
@@ -7,3 +8,24 @@
   height: 260px;
   margin-bottom: 20px;  
 } 
+=======
+#progress {
+    position:relative;
+    width:250px;
+    height:20px;
+    border:1px solid black;
+}
+
+#progress .progress-bar {
+    background:#99ccff;
+    height:20px;
+    width:0%;
+    display:inline-block;
+}
+
+#progress .progress-text {
+    position:absolute;
+    z-index:2;
+    right:0;
+}
+>>>>>>> 3c4b8573e3ae7518dc7eeda83abfc6d73623c261
