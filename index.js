@@ -1,14 +1,3 @@
-////chatbot for police page
-// function chatAlert(){
-//   var location = 'Saenpalm Nakorn Pathom'
-//   $('#alertbox').append('Found Irregal TookTook at '+location+'\n');
-// }
-// function chatBot(answer){
-//   var ans = answer;
-//   var location = 'Saenpalm Nakorn Pathom'
-//   if(ans=='h'){
-//   }
-// }
 function main() {
     // var linkMotion = ''
     var linkRain = ''
