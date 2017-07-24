@@ -4,7 +4,7 @@ function main() {
     var linkServo = ''
     var linkGas = ''
     // var linkSwitch = ''
-    var linkLight = ''
+    var linkLight = 'http://158.108.165.223/data/TUK40/alert'
     var linkPerson = ''
 
     var switauto = 1;
@@ -80,15 +80,15 @@ function main() {
     // }, 400);
 
     //Receive Light data
-    // setInterval(function() {
-    //     $.ajax({
-    //         url: linkLight
-    //     }).done(function(data) {
-    //         console.log('Receive Alcohol is done');
-    //     }).fail(function() {
-    //         console.error('Fail to receive Alcohol');
-    //     });
-    // }, 400);
+    setInterval(function() {
+        $.ajax({
+            url: linkLight
+        }).done(function(data) {
+            console.log('Receive Alcohol is done');
+        }).fail(function() {
+            console.error('Fail to receive Alcohol');
+        });
+    }, 400);
 
     // //Receive Switch data
     // setInterval(function() {
