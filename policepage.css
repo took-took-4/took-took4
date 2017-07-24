@@ -23,3 +23,8 @@ overflow: scroll;
  #news{
    border-style: dotted;
  }
+
+#graphText{
+  font-size: 30;
+  font-weight: bold;
+}
