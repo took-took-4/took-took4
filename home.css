@@ -1,13 +1,19 @@
-.intro{
-/* background-image :url("pic/tookFame.jpg"); */
-}
 .intro-header{
-    /* margin-top: 100px  ; */
-   
-    padding-top: 50px;
-    padding-bottom: 50px;
+     padding: center; 
+     /* padding-top: 50px;
+    padding-bottom: 50px;  */
     text-align: center;
-    color: #f8f8f8;
-    /* background: pic/tookFame.jpg no-repeat center center; */
-
+    color: black
+    /* font-family : Sans-serif; */
+}
+h1{
+    font-size: 70px;
+    text-shadow: 1px 2px white;
+}
+h2{
+    font-weight: 900; 
+    font-size: 40px;
+}
+.content-center{
+    margin-top: 200px;
 }
