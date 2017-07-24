@@ -23,3 +23,9 @@ overflow: scroll;
  #news{
    border-style: dotted;
  }
+
+ body{
+    background-color: #e6e6fa; 
+      /* background-color: #f0f8ff; */
+
+ }
