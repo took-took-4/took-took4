@@ -36,15 +36,14 @@
                     <span class="icon-bar"></span> -->
                 </button>
         <div class='col-md-10'>
-          <a class="navbar-brand" href="#">
-            <img class="img-responsive" src="pic/tooktook.png" alt="" style = "border: 0; float: left; margin-right:10px ; height:30px ; width:30px;"> Mr.Triwith Mutitakul
+          <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+            <img class="img-responsive" src="pic/tooktook.png" alt=""  style="border:0; float: left; margin-right:10px;" height="30px" width="30px"> Mr.Triwith Mutitakul
           </a>
 
         </div>
         <div class='col-md-2'>
           <div class="autobox">
-            <input type="checkbox" checked data-toggle="toggle" data-on="Automatic" data-off="Manual" data-onstyle="success" data-offstyle="danger">
-
+            <input id='switchauto' type="checkbox" checked data-toggle="toggle" data-on="Automatic" data-off="Manual" data-onstyle="success" data-offstyle="danger" >
           </div>
         </div>
       </div>
@@ -94,7 +93,7 @@
             <center>
               <label> Rain </label><br>
               <img class="img-responsive" src="pic/umbrella.png" alt="" height="40%" width="40%"><br>
-              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-onstyle="success" data-offstyle="danger">
+              <input id='switchrain' type="checkbox" checked data-toggle="toggle" data-style="ios" data-onstyle="success" data-offstyle="danger">
               <!-- <div class="checkbox">
               <label>
               <input type="checkbox" data-toggle="toggle">
@@ -110,12 +109,12 @@
       <div class="form-control infobox">
         <center>
           <label id='people'>Passenger
-        <img class="img-responsive" src="pic/512x5ff12.png" alt="" height="40%" width="40%">
+        <img class="img-responsive" id='personpic' src="pic/512x5ff12.png" alt="" height="40%" width="40%">
         </label>
           <div class="col-md-4"></div>
           <div class="col-md-4">
             <br>
-            <div class="well well-sm">x 1</div>
+            <div class="well well-sm" id='personnum'>x 1</div>
           </div>
         </center>
       </div>
