@@ -10,6 +10,10 @@ function main() {
     var switauto = 1;
     var notRed = true;
     var swit = 1;
+    var nonManual = true;
+
+    $('#switchrain').bootstrapToggle('off')
+
 
     $('#switchrain').bootstrapToggle('disable')
     //progress bar action
@@ -20,7 +24,9 @@ function main() {
         if (switauto == 0) {
             switauto = 1;
             $('#switchrain').bootstrapToggle('disable')
+            nonManual = true;
         } else {
+            nonManual = false;
             switauto = 0;
             $('#switchrain').bootstrapToggle('enable')
             // $('#switchrain').prop('disabled', true);
@@ -31,7 +37,7 @@ function main() {
         if (swit == 0) {
             swit = 1;
             $.ajax({
-                url: linkServo + '/set/' + '1'
+                url: linkServo + '/set/' + swit
             }).done(function() {
                 console.log('sent survo action complete');
             }).fail(function() {
@@ -40,7 +46,7 @@ function main() {
         } else {
             swit = 0;
             $.ajax({
-                url: linkServo + '/set/' + '0'
+                url: linkServo + '/set/' + swit
             }).done(function() {
                 console.log('sent survo action complete');
             }).fail(function() {
@@ -57,6 +63,17 @@ function main() {
     $('#graphpic').mouseleave(function() {
         $('#graphpic').attr('width', '40%')
         $('#graphpic').attr('height', '40%')
+
+    })
+
+    $('#rainpic').hover(function() {
+        $('#rainpic').attr('width', '45%')
+        $('#rainpic').attr('height', '45%')
+
+    })
+    $('#rainpic').mouseleave(function() {
+        $('#rainpic').attr('width', '40%')
+        $('#rainpic').attr('height', '40%')
 
     })
 
@@ -128,7 +145,7 @@ function main() {
                     })
                 }
             } else {
-                $('#personpic').attr('src', "pic/userMORE.png");
+                $('#personpic').attr('src', "pic/caution.png");
                 $('#personnum').text('x ' + data);
                 $('#personnum').css('color', 'red');
                 $('#passbox').css('background-color', 'red');
@@ -185,21 +202,25 @@ function main() {
             console.log('Receive Rain is done');
             $('#rainbox').text(' Rainfall : ' + data + ' mm ');
             if (data < 800) {
-                $.ajax({
-                    url: linkServo + '/set/' + '0'
-                }).done(function() {
-                    console.log('sent survo action complete');
-                }).fail(function() {
-                    console.error('Fail to sent survo action');
-                });
+                if (nonManual) {
+                    $.ajax({
+                        url: linkServo + '/set/' + '1'
+                    }).done(function() {
+                        console.log('sent survo action complete');
+                    }).fail(function() {
+                        console.error('Fail to sent survo action');
+                    });
+                }
             } else {
-                $.ajax({
-                    url: linkServo + '/set/' + '1'
-                }).done(function() {
-                    console.log('sent survo action complete');
-                }).fail(function() {
-                    console.error('Fail to sent survo action');
-                });
+                if (nonManual) {
+                    $.ajax({
+                        url: linkServo + '/set/' + '0'
+                    }).done(function() {
+                        console.log('sent survo action complete');
+                    }).fail(function() {
+                        console.error('Fail to sent survo action');
+                    });
+                }
             }
         }).fail(function() {
             console.error('Fail to receive Rain');

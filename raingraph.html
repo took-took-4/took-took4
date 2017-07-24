@@ -4,7 +4,7 @@
   <title>Passengers Graph</title>
   <link rel="icon" type="image/png" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="drivergraph.css" type="text/css">
+  <link rel="stylesheet" href="raingraph.css" type="text/css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
@@ -35,7 +35,7 @@
                 </button>
         <div class='col-md-5'>
           <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
-            <div class="glyphicon glyphicon-chevron-left"></div>  Back
+            <div class="glyphicon glyphicon-chevron-left"></div> Back
           </a>
         </div>
         <div class="col-md-5">
@@ -48,24 +48,23 @@
     <!-- /.container -->
   </nav>
 
-
-  <div class='rows' id="mid">
-    <div class=col-md-4>
-      <center>
-        <p id='head'>Top 5 Area of Passengers</p><br>
-        <canvas id="myChart" width="50px" height="50px"></canvas>
-      </center>
-    </div>
-    <div class=col-md-7>
-      <div class="container">
-        <h2 class="tabletop5">Forecast System</h2>
-        <p class="undertable">This system use the statistics we've collected from the past years to calculate and forecast the weather.</p>
-        <p>Location : Saenpalm Nakorn Prathom</p>
-        <p>Forcast Weather : Rainy</p>
+  <div class="container" id="mid">
+    <div class='rows' id="mid">
+      <div class=col-md-8>
+        <center>
+          <p id='head'>Statistic of Weather(Week)</p><br>
+          <canvas id="myChart" width="80%" height="50%"></canvas>
+        </center>
       </div>
+      <div class=col-md-4>
+          <h2 class="tabletop5">Forecast System</h2>
+          <p class="undertable">This system use the statistics we've collected from the past years to calculate and forecast the weather.</p>
+          <p class="weatherLocation"><b>Location : </b> Nakorn Prathom</p>
+          <p class="weatherLocation"><b>Forcast Weather : </b> Rainy</p>
+        </div>
     </div>
-    <div>
-      <script src='raingraph.js'></script>
+  </div>
+  <script src='raingraph.js'></script>
 </body>
 
 </html>
