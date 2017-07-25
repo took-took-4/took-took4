@@ -221,7 +221,7 @@ function main() {
         }).done(function(data) {
             console.log('Receive Rain is done');
             $('#rainbox').text(' Rainfall : ' + data + ' mm ');
-            if (data < 800) {
+            if (data < 600) {
                 if (nonManual) {
                     $.ajax({
                         url: linkServo + '/set/' + '1'

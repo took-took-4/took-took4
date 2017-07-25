@@ -37,6 +37,6 @@ function setupGraph(Ladprao, Ramkamhaeng, Sukhumvit, Bangna,Siam) {
 }
 
 function main(){
-  setupGraph(10,20,25,10,14);
+  setupGraph(26,22,21,19,18);
 }
 $().ready(main());

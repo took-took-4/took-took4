@@ -57,7 +57,119 @@ function addNew(head, detail) {
 }
 
 function main() {
+    var click1 = 0;
+    var click2 = 0;
+    var click3 = 0;
+    var click4 = 0;
+    var linkStop = 'http://158.108.165.223/data/TUK40/stop'
 
+    $('#newbut1').click(function(){
+      if(click1==0){
+        click1 = 1
+      $('#newbut1').attr('class','btn btn btn-lg');
+      $('#newbut1').text('');
+      $('#newbut1').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Locked')
+      $.ajax({
+          url: linkStop + '/set/' + '1'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }else{
+      click1 = 0
+      $('#newbut1').attr('class','btn btn-danger btn-lg');
+      $('#newbut1').text('');
+      $('#newbut1').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Lock Down')
+      $.ajax({
+          url: linkStop + '/set/' + '0'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }})
+
+    $('#newbut2').click(function(){
+      if(click2==0){
+        click2 = 1
+      $('#newbut2').attr('class','btn btn btn-lg');
+      $('#newbut2').text('');
+      $('#newbut2').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span>  Locked')
+      $.ajax({
+          url: linkStop + '/set/' + '1'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }else{
+      click2 = 0
+      $('#newbut2').attr('class','btn btn-danger btn-lg');
+      $('#newbut2').text('');
+      $('#newbut2').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Lock Down')
+      $.ajax({
+          url: linkStop + '/set/' + '0'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }})
+
+    $('#newbut3').click(function(){
+      if(click3==0){
+        click3 = 1
+      $('#newbut3').attr('class','btn btn btn-lg');
+      $('#newbut3').text('');
+      $('#newbut3').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Locked')
+      $.ajax({
+          url: linkStop + '/set/' + '1'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }else{
+      click3 = 0
+      $('#newbut3').attr('class','btn btn-danger btn-lg');
+      $('#newbut3').text('');
+      $('#newbut3').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Lock Down')
+      $.ajax({
+          url: linkStop + '/set/' + '0'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }})
+
+    $('#newbut4').click(function(){
+      if(click4==0){
+        click4 = 1
+      $('#newbut4').attr('class','btn btn btn-lg');
+      $('#newbut4').text('');
+      $('#newbut4').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Locked')
+      $.ajax({
+          url: linkStop + '/set/' + '1'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }else{
+      click4 = 0
+      $('#newbut4').attr('class','btn btn-danger btn-lg');
+      $('#newbut4').text('');
+      $('#newbut4').append('<span id="text2"class="glyphicon glyphicon-off" aria-hidden="true"></span> Lock Down')
+      $.ajax({
+          url: linkStop + '/set/' + '0'
+      }).done(function() {
+          console.log('sent Stop action complete');
+      }).fail(function() {
+          console.error('Fail to sent Stop action');
+      });
+    }})
     setupGraph(4, 3, 1, 3, 7);
 
 
