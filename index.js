@@ -1,4 +1,3 @@
-
 function main() {
     // var linkMotion = ''
     var linkRain = 'http://158.108.165.223/data/TUK40/rain'
@@ -11,6 +10,7 @@ function main() {
 
     var switauto = 1;
     var notRed = true;
+    var notRedgas = true;
     var swit = 1;
     var nonManual = true;
 
@@ -34,6 +34,18 @@ function main() {
             // $('#switchrain').prop('disabled', true);
         }
     });
+
+    setInterval(function() {
+        $.ajax({
+            url: linkServo
+        }).done(function(data) {
+            console.log('Receive Servo is done');
+            swit = data;
+        }).fail(function() {
+            console.error('Fail to receive Servo');
+        });
+    }, 400);
+
 
     $('#switchrain').change(function() {
         if (swit == 0) {
@@ -81,7 +93,7 @@ function main() {
 
     setInterval(function() {
         console.log();
-        $('#tempbox').text('Temperature : ' + (Math.floor(Math.random() * 6)+22) + '°C')
+        $('#tempbox').text('Temperature : ' + (Math.floor(Math.random() * 6) + 22) + '°C')
     }, 30000)
 
     //Receive person data
@@ -91,6 +103,7 @@ function main() {
         }).done(function(data) {
             console.log('Receive Person is done');
             if (data == 2) {
+                notRedgas = true;
                 $('#personpic').attr('src', "pic/user.png");
                 $('#personnum').text('x 2');
                 $('#personnum').css('color', 'black');
@@ -105,6 +118,7 @@ function main() {
                     })
                 }
             } else if (data == 3) {
+                notRedgas = true;
                 $('#personpic').attr('src', "pic/user3.png");
                 $('#personnum').text('x 3');
                 $('#personnum').css('color', 'black');
@@ -119,6 +133,7 @@ function main() {
                     })
                 }
             } else if (data == 0) {
+                notRedgas = true;
                 $('#personpic').attr('src', "pic/512x5ff12.png");
                 $('#personnum').text('x 0');
                 $('#personnum').css('color', 'black');
@@ -133,6 +148,7 @@ function main() {
                     })
                 }
             } else if (data == 1) {
+                notRedgas = true;
                 $('#personpic').attr('src', "pic/512x5ff12.png");
                 $('#personnum').text('x 1');
                 $('#personnum').css('color', 'black');
@@ -151,6 +167,7 @@ function main() {
                 $('#personnum').text('x ' + data);
                 $('#personnum').css('color', 'red');
                 $('#passbox').css('background-color', 'red');
+                notRedgas = false;
                 $.ajax({
                     url: linkLight + '/set/' + '1'
                 }).done(function() {
@@ -182,6 +199,7 @@ function main() {
                 })
             } else {
                 $('#gasbox').css('background-color', 'white');
+                if(notRedgas){
                 $.ajax({
                     url: linkLight + '/set/' + '0'
                 }).done(function() {
@@ -191,7 +209,7 @@ function main() {
                 })
                 notRed = true;
             }
-        }).fail(function() {
+        }}).fail(function() {
             console.error('Fail to receive Gas');
         });
     }, 400);
@@ -235,11 +253,11 @@ function main() {
             url: linkAlcohol
         }).done(function(data) {
             console.log('Receive Alcohol is done');
-            $('#alcohol').text(Math.floor(data/6.5)+' Mg%');
-            if(data>130){
-              $('#albox').css('background-color', 'red');
-            }else{
-              $('#albox').css('background-color', 'white');
+            $('#alcohol').text(Math.floor(data / 6.5) + ' Mg%');
+            if (data > 130) {
+                $('#albox').css('background-color', 'red');
+            } else {
+                $('#albox').css('background-color', 'white');
             }
         }).fail(function() {
             console.error('Fail to receive Alcohol');
