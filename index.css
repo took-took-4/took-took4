@@ -50,6 +50,11 @@ body{
     font-family: Courier New, Courier, monospace;
 }
 
+#graphtext{
+  font-size: 18;
+  font-family: Courier New, Courier, monospace;
+}
+
 #fame{
   text-align: center;
 }

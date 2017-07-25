@@ -1,3 +1,4 @@
+
 function main() {
     // var linkMotion = ''
     var linkRain = 'http://158.108.165.223/data/TUK40/rain'
@@ -6,6 +7,7 @@ function main() {
     // var linkSwitch = ''
     var linkLight = 'http://158.108.165.223/data/TUK40/alert'
     var linkPerson = 'http://158.108.165.223/data/TUK40/people'
+    var linkAlcohol = 'http://158.108.165.223/data/TUK40/alcohol'
 
     var switauto = 1;
     var notRed = true;
@@ -79,7 +81,7 @@ function main() {
 
     setInterval(function() {
         console.log();
-        $('#tempbox').text('Temperature : ' + Math.floor(Math.random() * 42) + '°C')
+        $('#tempbox').text('Temperature : ' + (Math.floor(Math.random() * 6)+22) + '°C')
     }, 30000)
 
     //Receive person data
@@ -228,17 +230,21 @@ function main() {
     }, 400);
 
     //Receive Alcohol data
-    // setInterval(function() {
-    //     $.ajax({
-    //         url: linkGas
-    //     }).done(function(data) {
-    //         console.log('Receive Alcohol is done');
-    //         $('#recentAl').text('Recently : '+$('#alcohol').text()+' Mg%')
-    //         $('#alcohol').text(data+' Mg%');
-    //     }).fail(function() {
-    //         console.error('Fail to receive Alcohol');
-    //     });
-    // }, 400);
+    setInterval(function() {
+        $.ajax({
+            url: linkAlcohol
+        }).done(function(data) {
+            console.log('Receive Alcohol is done');
+            $('#alcohol').text(Math.floor(data/6.5)+' Mg%');
+            if(data>130){
+              $('#albox').css('background-color', 'red');
+            }else{
+              $('#albox').css('background-color', 'white');
+            }
+        }).fail(function() {
+            console.error('Fail to receive Alcohol');
+        });
+    }, 400);
 
     //Receive Light data
     setInterval(function() {

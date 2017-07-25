@@ -6,7 +6,7 @@ function setupGraph(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sund
             labels: ['19 Jul', '20 Jul', '21 Jul', '22 Jul', '23 Jul', '24 Jul', '25 Jul(Today)'],
             datasets: [{
                     label: 'Year 2016',
-                    data: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday],
+                    data: [947, 750, 870, 1001, 790, 820, 795],
                     backgroundColor: [
                         'rgba(0, 158, 15, 0.2)',
                         'rgba(255, 158, 33, 0.2)',
@@ -65,6 +65,6 @@ function setupGraph(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sund
 }
 
 function main() {
-    setupGraph(1025, 957, 1000, 900, 941, 870, 790, 814);
+    setupGraph(1025, 957, 1000, 900, 941, 870, 774);
 }
 $().ready(main)

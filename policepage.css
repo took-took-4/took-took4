@@ -20,7 +20,7 @@ overflow: scroll;
    font-family: fantasy;
  }
 
- #news{
+ #news1,#news2,#news3,#news4{
    border-style: dotted;
  }
 #graphText{
@@ -46,7 +46,7 @@ overflow: scroll;
 
  .posys{
    color: white;
-   display: flex; 
+   display: flex;
    align-items: center;
    font-weight: bold;
    margin-left: 5em;
